@@ -84,7 +84,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             </div>
             <Button onClick={() => setIsModalOpen(true)}>
               <Info size={18} className="mr-2" />
-              More Info{Switch to Dark Mode}
+              More Info
             </Button>
           </CardFooter>
         </Card>
