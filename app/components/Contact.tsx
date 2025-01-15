@@ -57,7 +57,7 @@ const Contact = () => {
             <div className="space-y-4">
               <div className="flex items-center">
                 <MapPin className="w-6 h-6 mr-4 text-blue-600 dark:text-blue-400" />
-                <span>Vellore, Tamil Nadu, India</span>
+                <span>Nashik, Maharashtra, India</span>
               </div>
               <div className="flex items-center">
                 <Mail className="w-6 h-6 mr-4 text-blue-600 dark:text-blue-400" />
@@ -91,14 +91,14 @@ const Contact = () => {
               <h4 className="text-xl font-semibold mb-4">Location</h4>
               <div className="aspect-w-16 aspect-h-9">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124505.02023865446!2d79.0779707347657!3d12.905214599999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad38e61fa68ffb%3A0xbedda6917d262b5e!2sVellore%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1652913014201!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d120073.05619274392!2d73.71152159726561!3d20.01110700000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bddeba0fbe5ad7f%3A0xc214bf9e4e39e570!2sNashik%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1652913014201!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
                   allowFullScreen=""
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Vellore, Tamil Nadu on Google Maps"
+                  title="Nashik, Maharashtra on Google Maps"
                 ></iframe>
               </div>
             </div>
