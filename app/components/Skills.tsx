@@ -3,19 +3,16 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Code, Cloud, Database, PenToolIcon as Tool, BarChart, ChevronDown, ChevronUp } from 'lucide-react'
-import { Progress } from "@/components/ui/progress"
 import { Button } from "@/components/ui/button"
 import {
   Card,
   CardContent,
-  CardDescription,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
 
 interface Skill {
   name: string
-  level: number
 }
 
 interface SkillCategory {
@@ -29,49 +26,49 @@ const skillCategories: SkillCategory[] = [
     title: "Programming Languages",
     icon: Code,
     skills: [
-      { name: "C++", level: 90 },
-      { name: "Java", level: 85 },
-      { name: "Python", level: 95 },
-      { name: "SQL", level: 80 },
+      { name: "C++" },
+      { name: "Java" },
+      { name: "Python" },
+      { name: "SQL" },
     ]
   },
   {
     title: "Cloud Platforms",
     icon: Cloud,
     skills: [
-      { name: "AWS", level: 85 },
-      { name: "Azure", level: 80 },
+      { name: "AWS" },
+      { name: "Azure" },
     ]
   },
   {
     title: "Data Science",
     icon: Database,
     skills: [
-      { name: "Scikit-learn", level: 90 },
-      { name: "Pandas", level: 95 },
-      { name: "Matplotlib", level: 85 },
-      { name: "Seaborn", level: 80 },
-      { name: "Streamlit", level: 75 },
+      { name: "Scikit-learn" },
+      { name: "Pandas" },
+      { name: "Matplotlib" },
+      { name: "Seaborn" },
+      { name: "Streamlit" },
     ]
   },
   {
     title: "Tools and Frameworks",
     icon: Tool,
     skills: [
-      { name: "Machine Learning", level: 85 },
-      { name: "IoT", level: 75 },
-      { name: "Flask", level: 80 },
-      { name: "Git", level: 90 },
-      { name: "Excel", level: 85 },
+      { name: "Machine Learning" },
+      { name: "IoT" },
+      { name: "Flask" },
+      { name: "Git" },
+      { name: "Excel" },
     ]
   },
   {
     title: "Management Skills",
     icon: BarChart,
     skills: [
-      { name: "Prototyping", level: 85 },
-      { name: "User Research", level: 80 },
-      { name: "Agile Methodology", level: 90 },
+      { name: "Prototyping" },
+      { name: "User Research" },
+      { name: "Agile Methodology" },
     ]
   }
 ]
@@ -109,21 +106,19 @@ const SkillCard: React.FC<{ category: SkillCategory }> = ({ category }) => {
               }}
               transition={{ duration: 0.8, ease: [0.04, 0.62, 0.23, 0.98] }}
             >
-              {category.skills.map((skill, index) => (
-                <motion.div
-                  key={skill.name}
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  className="mb-4"
-                >
-                  <div className="flex justify-between mb-1">
+              <div className="grid grid-cols-2 gap-2">
+                {category.skills.map((skill, index) => (
+                  <motion.div
+                    key={skill.name}
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                    className="bg-gray-100 dark:bg-gray-700 rounded-md p-2"
+                  >
                     <span className="text-sm font-medium">{skill.name}</span>
-                    <span className="text-sm font-medium text-blue-600 dark:text-blue-400">{skill.level}%</span>
-                  </div>
-                  <Progress value={skill.level} className="w-full" />
-                </motion.div>
-              ))}
+                  </motion.div>
+                ))}
+              </div>
             </motion.div>
           )}
         </AnimatePresence>
