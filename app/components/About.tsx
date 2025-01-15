@@ -41,7 +41,7 @@ const About = () => {
 
   const contactInfo = [
     { icon: GraduationCap, text: 'VIT University, Vellore', link: null },
-    { icon: MapPin, text: 'Vellore, Tamil Nadu, India', link: null },
+    { icon: MapPin, text: 'Nasik, Maharashtra, India', link: null },
     { icon: Mail, text: 'aniketnikam341@gmail.com', link: 'mailto:aniketnikam341@gmail.com' },
     { icon: Phone, text: '+91 9209067817', link: null },
   ];
