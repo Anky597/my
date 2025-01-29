@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ProjectCard } from './ProjectCard'
-import { SocialNetworkLogo, LoanApprovalLogo, SmartAgricultureLogo } from './ProjectLogos'
+import { SocialNetworkLogo, LoanApprovalLogo, SmartAgricultureLogo, VitInterviewLogo } from './ProjectLogos'
 import { Button } from "@/components/ui/button"
 
 const Projects = () => {
@@ -72,6 +72,28 @@ const Projects = () => {
         "Ensuring reliable communication between IoT devices and cloud services"
       ],
       category: "iot"
+    },
+    {
+      title: "VIT Interview Experiences",
+      description: "A platform for VIT students to share and learn from each other's interview experiences.",
+      longDescription: "Developed a comprehensive web application enabling VIT students to share their interview experiences. The platform features user authentication, experience submission forms, and a searchable database of interviews.",
+      techStack: "Next.js, React, Tailwind CSS, Supabase, Firebase Authentication",
+      appLink: "https://vitinterview.vercel.app/",
+      githubLink: "https://github.com/yourusername/vit-interview-experiences",
+      logo: VitInterviewLogo,
+      features: [
+        "User authentication and profile management",
+        "Submission and editing of interview experiences",
+        "Search and filter functionality for experiences",
+        "Responsive design for various devices"
+      ],
+      challenges: [
+        "Implementing secure user authentication",
+        "Designing an intuitive user interface",
+        "Ensuring data consistency and integrity",
+        "Optimizing performance for a seamless user experience"
+      ],
+      category: "web-development"
     }
   ]
 
@@ -89,44 +111,16 @@ const Projects = () => {
           Projects
         </motion.h2>
         <div className="flex justify-center space-x-4 mb-8">
-          <Button
-            onClick={() => setFilter('all')}
-            variant={filter === 'all' ? 'default' : 'outline'}
-          >
-            All
-          </Button>
-          <Button
-            onClick={() => setFilter('data-science')}
-            variant={filter === 'data-science' ? 'default' : 'outline'}
-          >
-            Data Science
-          </Button>
-          <Button
-            onClick={() => setFilter('machine-learning')}
-            variant={filter === 'machine-learning' ? 'default' : 'outline'}
-          >
-            Machine Learning
-          </Button>
-          <Button
-            onClick={() => setFilter('iot')}
-            variant={filter === 'iot' ? 'default' : 'outline'}
-          >
-            IoT
-          </Button>
+          <Button onClick={() => setFilter('all')} variant={filter === 'all' ? 'default' : 'outline'}>All</Button>
+          <Button onClick={() => setFilter('data-science')} variant={filter === 'data-science' ? 'default' : 'outline'}>Data Science</Button>
+          <Button onClick={() => setFilter('machine-learning')} variant={filter === 'machine-learning' ? 'default' : 'outline'}>Machine Learning</Button>
+          <Button onClick={() => setFilter('iot')} variant={filter === 'iot' ? 'default' : 'outline'}>IoT</Button>
+          <Button onClick={() => setFilter('web-development')} variant={filter === 'web-development' ? 'default' : 'outline'}>Web Development</Button>
         </div>
         <AnimatePresence>
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-            layout
-          >
+          <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" layout>
             {filteredProjects.map((project, index) => (
-              <motion.div
-                key={project.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
+              <motion.div key={project.title} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.5, delay: index * 0.1 }}>
                 <ProjectCard {...project} />
               </motion.div>
             ))}
@@ -138,4 +132,3 @@ const Projects = () => {
 }
 
 export default Projects
-
