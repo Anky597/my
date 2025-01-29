@@ -39,3 +39,11 @@ export const SmartAgricultureLogo = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
+// VIT Interview Experience Logo
+export const VITInterviewLogo = (props: SVGProps<SVGSVGElement>) => (
+  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" strokeWidth="2" />
+    <path d="M6 8H18M6 12H14M6 16H12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+    <circle cx="18" cy="16" r="1" fill="currentColor" />
+  </svg>
+);
