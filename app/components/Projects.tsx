@@ -1,19 +1,46 @@
-'use client'
+"use client"
 
-import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { ProjectCard } from './ProjectCard'
-import { SocialNetworkLogo, LoanApprovalLogo, SmartAgricultureLogo, VitInterviewLogo } from './ProjectLogos'
+import { useState } from "react"
+import { motion, AnimatePresence } from "framer-motion"
+import { ProjectCard } from "./ProjectCard"
+import { SocialNetworkLogo, LoanApprovalLogo, SmartAgricultureLogo, InterviewExperienceLogo } from "./ProjectLogos"
 import { Button } from "@/components/ui/button"
 
 const Projects = () => {
-  const [filter, setFilter] = useState('all')
+  const [filter, setFilter] = useState("all")
 
   const projects = [
     {
+      title: "VIT Interview Experiences",
+      description:
+        "A platform for sharing and accessing interview experiences at VIT, built with Next.js, React, and Supabase.",
+      longDescription:
+        "Developed a comprehensive web platform for VIT students to share and access interview experiences. The project utilizes Next.js for the frontend, Supabase for the backend, and Firebase for authentication, providing a seamless and responsive user experience.",
+      techStack: "Next.js, React, Tailwind CSS, Supabase, Firebase Authentication",
+      appLink: "https://vit-interview-experiences.vercel.app/",
+      githubLink: "https://github.com/Anky597/vit-interview-experiences",
+      logo: InterviewExperienceLogo,
+      features: [
+        "User authentication and email verification",
+        "CRUD operations for interview experiences",
+        "Advanced search and filtering functionality",
+        "Responsive design for all devices",
+        "Server-side rendering for improved SEO",
+      ],
+      challenges: [
+        "Implementing efficient data fetching and state management",
+        "Ensuring data security and user privacy",
+        "Optimizing performance for large datasets",
+        "Creating an intuitive and accessible user interface",
+      ],
+      category: "web-development",
+    },
+    {
       title: "Social Network Analysis Tool",
-      description: "Interactive Streamlit-based web application for social network analysis, reducing data analysis time by 40%.",
-      longDescription: "Engineered and deployed an interactive Streamlit-based web application for social network analysis. This tool significantly reduced data analysis time by 40% and implemented multiple clustering algorithms, achieving 82% segmentation accuracy with Mean Shift.",
+      description:
+        "Interactive Streamlit-based web application for social network analysis, reducing data analysis time by 40%.",
+      longDescription:
+        "Engineered and deployed an interactive Streamlit-based web application for social network analysis. This tool significantly reduced data analysis time by 40% and implemented multiple clustering algorithms, achieving 82% segmentation accuracy with Mean Shift.",
       techStack: "Python, scikit-learn, Pandas, Matplotlib, Seaborn, Streamlit",
       appLink: "https://resumeproject1-btztnegmmngpeve225zmet.streamlit.app/",
       githubLink: "https://github.com/Anky597/social_network_analysis",
@@ -22,40 +49,44 @@ const Projects = () => {
         "Interactive data visualization",
         "Multiple clustering algorithms",
         "Real-time network analysis",
-        "Customizable parameters"
+        "Customizable parameters",
       ],
       challenges: [
         "Optimizing performance for large datasets",
         "Implementing intuitive UI for complex network structures",
-        "Integrating multiple clustering algorithms seamlessly"
+        "Integrating multiple clustering algorithms seamlessly",
       ],
-      category: "data-science"
+      category: "data-science",
     },
     {
       title: "Interpretation of ML model using XAI",
       description: "Understanding of ML model decision making process with the help of SHAP and LIME",
-      longDescription: "Engineered a machine learning-based loan approval system using Python, Scikit-learn, and Flask. The system achieved 83.7% accuracy with Logistic Regression and integrated LIME and SHAP for model explainability, providing transparent decision-making processes.",
+      longDescription:
+        "Engineered a machine learning-based loan approval system using Python, Scikit-learn, and Flask. The system achieved 83.7% accuracy with Logistic Regression and integrated LIME and SHAP for model explainability, providing transparent decision-making processes.",
       techStack: "Python, Matplotlib, Scikit-learn, Flask, SHAP, LIME",
-      appLink: "https://medium.com/@aniketnikam341/decoding-ai-unveiling-black-boxes-with-shap-lime-for-transparent-decisions-b1407b09887b",
+      appLink:
+        "https://medium.com/@aniketnikam341/decoding-ai-unveiling-black-boxes-with-shap-lime-for-transparent-decisions-b1407b09887b",
       githubLink: "https://github.com/Anky597/loan-prediction",
       logo: LoanApprovalLogo,
       features: [
         "High accuracy loan approval predictions",
         "Model explainability using LIME and SHAP",
         "User-friendly web interface",
-        "Secure data handling and processing"
+        "Secure data handling and processing",
       ],
       challenges: [
         "Balancing model accuracy with interpretability",
         "Implementing fair and unbiased decision-making algorithms",
-        "Ensuring data privacy and security in financial applications"
+        "Ensuring data privacy and security in financial applications",
       ],
-      category: "machine-learning"
+      category: "machine-learning",
     },
     {
       title: "Smart Agriculture with Generative AI",
-      description: "Automated irrigation system with IoT sensors and ESP32, reducing water usage by 20%. Integrated Gemini LLM for plant disease detection.",
-      longDescription: "Developed an automated irrigation system integrating IoT sensors with ESP32, reducing water usage by 20%. The system leverages the Gemini LLM model for plant disease detection, achieving 87% accuracy in identifying and diagnosing plant health issues.",
+      description:
+        "Automated irrigation system with IoT sensors and ESP32, reducing water usage by 20%. Integrated Gemini LLM for plant disease detection.",
+      longDescription:
+        "Developed an automated irrigation system integrating IoT sensors with ESP32, reducing water usage by 20%. The system leverages the Gemini LLM model for plant disease detection, achieving 87% accuracy in identifying and diagnosing plant health issues.",
       techStack: "C, Gemini API, Python, Gradio, Blynk IoT Cloud, Hugging Face",
       appLink: "https://huggingface.co/spaces/Ankys/example",
       githubLink: "https://github.com/Anky597/AGRO-IOT",
@@ -64,40 +95,18 @@ const Projects = () => {
         "Automated irrigation based on soil moisture and weather conditions",
         "Plant disease detection using Gemini LLM",
         "Real-time monitoring and control via mobile app",
-        "Integration with weather APIs for predictive watering"
+        "Integration with weather APIs for predictive watering",
       ],
       challenges: [
         "Optimizing power consumption for long-term field deployment",
         "Improving accuracy of plant disease detection in various lighting conditions",
-        "Ensuring reliable communication between IoT devices and cloud services"
+        "Ensuring reliable communication between IoT devices and cloud services",
       ],
-      category: "iot"
+      category: "iot",
     },
-    {
-      title: "VIT Interview Experiences",
-      description: "A platform for VIT students to share and learn from each other's interview experiences.",
-      longDescription: "Developed a comprehensive web application enabling VIT students to share their interview experiences. The platform features user authentication, experience submission forms, and a searchable database of interviews.",
-      techStack: "Next.js, React, Tailwind CSS, Supabase, Firebase Authentication",
-      appLink: "https://vitinterview.vercel.app/",
-      githubLink: "https://github.com/yourusername/vit-interview-experiences",
-      logo: VitInterviewLogo,
-      features: [
-        "User authentication and profile management",
-        "Submission and editing of interview experiences",
-        "Search and filter functionality for experiences",
-        "Responsive design for various devices"
-      ],
-      challenges: [
-        "Implementing secure user authentication",
-        "Designing an intuitive user interface",
-        "Ensuring data consistency and integrity",
-        "Optimizing performance for a seamless user experience"
-      ],
-      category: "web-development"
-    }
   ]
 
-  const filteredProjects = filter === 'all' ? projects : projects.filter(project => project.category === filter)
+  const filteredProjects = filter === "all" ? projects : projects.filter((project) => project.category === filter)
 
   return (
     <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-900">
@@ -110,17 +119,45 @@ const Projects = () => {
         >
           Projects
         </motion.h2>
-        <div className="flex justify-center space-x-4 mb-8">
-          <Button onClick={() => setFilter('all')} variant={filter === 'all' ? 'default' : 'outline'}>All</Button>
-          <Button onClick={() => setFilter('data-science')} variant={filter === 'data-science' ? 'default' : 'outline'}>Data Science</Button>
-          <Button onClick={() => setFilter('machine-learning')} variant={filter === 'machine-learning' ? 'default' : 'outline'}>Machine Learning</Button>
-          <Button onClick={() => setFilter('iot')} variant={filter === 'iot' ? 'default' : 'outline'}>IoT</Button>
-          <Button onClick={() => setFilter('web-development')} variant={filter === 'web-development' ? 'default' : 'outline'}>Web Development</Button>
+        <div className="flex flex-wrap justify-center space-x-4 mb-8">
+          <Button onClick={() => setFilter("all")} variant={filter === "all" ? "default" : "outline"} className="mb-2">
+            All
+          </Button>
+          <Button
+            onClick={() => setFilter("web-development")}
+            variant={filter === "web-development" ? "default" : "outline"}
+            className="mb-2"
+          >
+            Web Development
+          </Button>
+          <Button
+            onClick={() => setFilter("data-science")}
+            variant={filter === "data-science" ? "default" : "outline"}
+            className="mb-2"
+          >
+            Data Science
+          </Button>
+          <Button
+            onClick={() => setFilter("machine-learning")}
+            variant={filter === "machine-learning" ? "default" : "outline"}
+            className="mb-2"
+          >
+            Machine Learning
+          </Button>
+          <Button onClick={() => setFilter("iot")} variant={filter === "iot" ? "default" : "outline"} className="mb-2">
+            IoT
+          </Button>
         </div>
         <AnimatePresence>
           <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" layout>
             {filteredProjects.map((project, index) => (
-              <motion.div key={project.title} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.5, delay: index * 0.1 }}>
+              <motion.div
+                key={project.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
                 <ProjectCard {...project} />
               </motion.div>
             ))}
@@ -132,3 +169,4 @@ const Projects = () => {
 }
 
 export default Projects
+
