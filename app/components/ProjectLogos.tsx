@@ -1,4 +1,4 @@
-import { SVGProps } from 'react';
+import type { SVGProps } from "react"
 
 // Social Network Analysis Tool Logo
 export const SocialNetworkLogo = (props: SVGProps<SVGSVGElement>) => (
@@ -9,7 +9,7 @@ export const SocialNetworkLogo = (props: SVGProps<SVGSVGElement>) => (
     <circle cx="12" cy="16" r="2" fill="currentColor" />
     <path d="M8 10L12 16M12 16L16 10M12 16L12 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
   </svg>
-);
+)
 
 // Loan Approval System Logo
 export const LoanApprovalLogo = (props: SVGProps<SVGSVGElement>) => (
@@ -19,7 +19,7 @@ export const LoanApprovalLogo = (props: SVGProps<SVGSVGElement>) => (
     <path d="M12 4V8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
     <path d="M9 9H15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
   </svg>
-);
+)
 
 // Smart Agriculture Logo
 export const SmartAgricultureLogo = (props: SVGProps<SVGSVGElement>) => (
@@ -32,18 +32,20 @@ export const SmartAgricultureLogo = (props: SVGProps<SVGSVGElement>) => (
       fill="none"
     />
     <path d="M7 14H17C18 14 20 16 20 17V21H4V17C4 16 6 14 7 14Z" stroke="currentColor" strokeWidth="2" fill="none" />
-    <path
-      d="M6 8C6 7 8 5 9 5C10 5 12 7 12 8C12 9 10 10 9 10C8 10 6 9 6 8Z"
-      fill="currentColor"
-    />
+    <path d="M6 8C6 7 8 5 9 5C10 5 12 7 12 8C12 9 10 10 9 10C8 10 6 9 6 8Z" fill="currentColor" />
   </svg>
-);
+)
 
-// VIT Interview Experience Logo
-export const VITInterviewLogo = (props: SVGProps<SVGSVGElement>) => (
+// VIT Interview Experiences Logo
+export const InterviewExperienceLogo = (props: SVGProps<SVGSVGElement>) => (
   <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-    <rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" strokeWidth="2" />
-    <path d="M6 8H18M6 12H14M6 16H12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-    <circle cx="18" cy="16" r="1" fill="currentColor" />
+    <path d="M20 6H4V18H20V6Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M12 10V14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M8 10V14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M16 10V14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
-);
+)
+
+// Export all logos
+export { SocialNetworkLogo, LoanApprovalLogo, SmartAgricultureLogo, InterviewExperienceLogo }
+
