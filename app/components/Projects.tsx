@@ -17,7 +17,7 @@ const Projects = () => {
       longDescription:
         "Developed a comprehensive web platform for VIT students to share and access interview experiences. The project utilizes Next.js for the frontend, Supabase for the backend, and Firebase for authentication, providing a seamless and responsive user experience.",
       techStack: "Next.js, React, Tailwind CSS, Supabase, Firebase Authentication",
-      appLink: "https://vit-interview-experiences.vercel.app/",
+      appLink: "https://vitinterview.vercel.app/",
       githubLink: "https://github.com/Anky597/vit-interview-experiences",
       logo: InterviewExperienceLogo,
       features: [
